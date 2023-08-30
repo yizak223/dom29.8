@@ -98,16 +98,16 @@ function getNumCreareObject() {
     var num = prompt('num')
     var buildingObject = {}
     for (var i = 0; i < num; i++) {
-        buildingObject.name = prompt('name')
-        buildingObject.kablan = prompt('adress')
-        buildingObject.company = prompt('numClasses')
-        buildingObject.floors = prompt('workers')
+        buildingObject.kablan = prompt('kablan')
+        buildingObject.company = prompt('company')
+        buildingObject.floors = prompt('floors')
         buildingObject.apartment = prompt('apartment')
-        var buildingElement = divElement.innerHTML += `<h1>name: ${buildingObject.name}</h1>
+        var newBuildingHTML = divElement.innerHTML += `<div class="building">
         <p>kablan: ${buildingObject.kablan}</p>
         <p>company:${buildingObject.company}</p>
         <p>floors:${buildingObject.floors}</p>
         <p>apartment:${buildingObject.apartment}</p>
+        </div>
         `
     }
 }
@@ -133,4 +133,27 @@ function getNumCreareObjectOfStores() {
 }
 // getNumCreareObjectOfStores()
 //19
+function getHowMuchBuildingBuilt() {
+    console.log(document.getElementsByClassName(`building`).length);
+}
+// getHowMuchBuildingBuilt()
+//20
+var orderElement = document.getElementsByClassName('myOrderList')
+function builtObjectsFromUserToListOfContactMan() {
+    var num = +prompt('number')
+    var contactObject = {}
+    for (var i = 0; i < num; i++) {
+        hisName = prompt('enter name')
+        contactObject.company = prompt('enter company')
+        contactObject.phone = prompt('enter phone')
+        contactObject.email = prompt('enter email')
+        orderElement = divElement.innerHTML += `<li><strong>his name: </strong>${hisName}</li>
+        <li><strong>his company: </strong>${contactObject.company}</li>
+        <li><strong>his phone: </strong>${contactObject.phone}</li>
+        <li><strong>his email: </strong>${contactObject.email}</li>
+        `
+    }
 
+}
+// builtObjectsFromUserToListOfContactMan() 
+//21
