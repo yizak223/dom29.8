@@ -156,7 +156,7 @@ function builtObjectsFromUserToListOfContactMan() {
 
 function getTableOfDoctor() {
     var num = +prompt('number')
-    var tableElement = divElement.innerHTML += `
+    var tableElement = `
             <table>
             <thead>
             <th>full name</th><th>professional</th><th>phone</th><th>avaibale?</th><th>email</th>
@@ -169,15 +169,19 @@ function getTableOfDoctor() {
         doctorObject.phone = prompt('phone')
         doctorObject.avaibale = prompt('avaibale')
         doctorObject.email = prompt('email')
-        tableElement =  divElement.innerHTML += 
+        tableElement += 
             `<tr>
-            <td>${doctorObject.fullname}</td><td>${doctorObject.professional}</td><td>${doctorObject.phone}</td><td>${doctorObject.avaibale}</td><td>${doctorObject.email}</td>
+            <td>${doctorObject.fullname}</td>
+            <td>${doctorObject.professional}</td>
+            <td>${doctorObject.phone}</td>
+            <td>${doctorObject.avaibale}</td>
+            <td>${doctorObject.email}</td>
             </tr>
             `
        
     }
-    tableElement = divElement.innerHTML +=`</tbody></table>`
+    tableElement += `</tbody></table>`
+    document.getElementById(`doctorTable`).innerHTML = tableElement;
 }
-
-            
+  
 getTableOfDoctor() 
