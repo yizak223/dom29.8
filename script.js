@@ -8,7 +8,7 @@
 // console.log(header2.textContent);
 // header.style.color="red"
 document.getElementById("header1").innerHTML = 'something1'
-document.getElementsByTagName("h1")[1].innerHTML='something2'  
+document.getElementsByTagName("h1")[1].innerHTML = 'something2'
 
 // document.getElementsByTagName("p")[0].innerHTML
 // document.getElementsByClassName("test")[0].innerHTML
