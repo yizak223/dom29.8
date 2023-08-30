@@ -147,13 +147,37 @@ function builtObjectsFromUserToListOfContactMan() {
         contactObject.company = prompt('enter company')
         contactObject.phone = prompt('enter phone')
         contactObject.email = prompt('enter email')
-        orderElement = divElement.innerHTML += `<li><strong>his name: </strong>${hisName}</li>
-        <li><strong>his company: </strong>${contactObject.company}</li>
-        <li><strong>his phone: </strong>${contactObject.phone}</li>
-        <li><strong>his email: </strong>${contactObject.email}</li>
-        `
+        orderElement = divElement.innerHTML += `<li><strong>his name: </strong>${hisName}</li>`
     }
 
 }
 // builtObjectsFromUserToListOfContactMan() 
 //21
+
+function getTableOfDoctor() {
+    var num = +prompt('number')
+    var tableElement = divElement.innerHTML += `
+            <table>
+            <thead>
+            <th>full name</th><th>professional</th><th>phone</th><th>avaibale?</th><th>email</th>
+            </thead>
+            <tbody>` 
+    for (var i = 0; i < num; i++) {
+        var doctorObject = {}
+        doctorObject.fullname = prompt('name')
+        doctorObject.professional = prompt('professional')
+        doctorObject.phone = prompt('phone')
+        doctorObject.avaibale = prompt('avaibale')
+        doctorObject.email = prompt('email')
+        tableElement =  divElement.innerHTML += 
+            `<tr>
+            <td>${doctorObject.fullname}</td><td>${doctorObject.professional}</td><td>${doctorObject.phone}</td><td>${doctorObject.avaibale}</td><td>${doctorObject.email}</td>
+            </tr>
+            `
+       
+    }
+    tableElement = divElement.innerHTML +=`</tbody></table>`
+}
+
+            
+getTableOfDoctor() 
