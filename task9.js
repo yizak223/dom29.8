@@ -161,7 +161,9 @@ function getTableOfDoctor() {
             <thead>
             <th>full name</th><th>professional</th><th>phone</th><th>avaibale?</th><th>email</th>
             </thead>
-            <tbody>` 
+            <tbody id = ' myTBody'>
+            </tbody></table>`
+            var elementTbody=document.getElementById('myTBody')
     for (var i = 0; i < num; i++) {
         var doctorObject = {}
         doctorObject.fullname = prompt('name')
@@ -169,19 +171,17 @@ function getTableOfDoctor() {
         doctorObject.phone = prompt('phone')
         doctorObject.avaibale = prompt('avaibale')
         doctorObject.email = prompt('email')
-        tableElement += 
+        elementTbody.innerHTML +=
             `<tr>
             <td>${doctorObject.fullname}</td>
             <td>${doctorObject.professional}</td>
             <td>${doctorObject.phone}</td>
             <td>${doctorObject.avaibale}</td>
             <td>${doctorObject.email}</td>
-            </tr>
-            `
-       
+            </tr>`
+
     }
-    tableElement += `</tbody></table>`
     document.getElementById(`doctorTable`).innerHTML = tableElement;
 }
-  
+
 getTableOfDoctor() 
