@@ -151,37 +151,26 @@ function builtObjectsFromUserToListOfContactMan() {
     }
 
 }
-// builtObjectsFromUserToListOfContactMan() 
 //21
-
-function getTableOfDoctor() {
+function addDoctorObjectToTable() {
     var num = +prompt('number')
-    var tableElement = `
-            <table>
-            <thead>
-            <th>full name</th><th>professional</th><th>phone</th><th>avaibale?</th><th>email</th>
-            </thead>
-            <tbody id = ' myTBody'>
-            </tbody></table>`
-            var elementTbody=document.getElementById('myTBody')
-    for (var i = 0; i < num; i++) {
-        var doctorObject = {}
-        doctorObject.fullname = prompt('name')
-        doctorObject.professional = prompt('professional')
-        doctorObject.phone = prompt('phone')
-        doctorObject.avaibale = prompt('avaibale')
-        doctorObject.email = prompt('email')
-        elementTbody.innerHTML +=
-            `<tr>
-            <td>${doctorObject.fullname}</td>
-            <td>${doctorObject.professional}</td>
-            <td>${doctorObject.phone}</td>
-            <td>${doctorObject.avaibale}</td>
-            <td>${doctorObject.email}</td>
-            </tr>`
-
+for (let i = 0; i <num ; i++) {
+    var doctorObject = {
+    fullname : prompt('name'),
+    professional : prompt('professional'),
+    phone : prompt('phone'),
+    avaibale : prompt('avaibale'),
+    email : prompt('email')
+    
     }
-    document.getElementById(`doctorTable`).innerHTML = tableElement;
+    myTable.innerHTML+=`<tr>
+    <td>${doctorObject.fullname}</td>
+    <td>${doctorObject.professional}</td>
+    <td>${doctorObject.phone}</td>
+    <td>${doctorObject.avaibale}</td>
+    <td>${doctorObject.email}</td>
+    </tr>`
 }
-
-getTableOfDoctor() 
+    
+}
+// addDoctorObjectToTable() 
